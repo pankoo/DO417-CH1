@@ -1,0 +1,12 @@
+---
+- name: First Play
+  hosts: win1.example.com
+  tasks:
+
+    - name: Ensure ansible.txt file exists
+      win_copy:
+        content: "Hello from Ansible Tower"
+        dest: C:\Users\devops\Desktop\ansible.txt
+
+
+    

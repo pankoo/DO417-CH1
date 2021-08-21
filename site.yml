@@ -1,0 +1,11 @@
+---
+- name: Ensure correct name of the service
+  hosts: win1.example.com
+  tasks:
+
+    - name:  Rename W32Time to Spooler service name
+      win_service:
+        name: W32Time
+        start_mode: auto
+        state: running
+        
